@@ -74,7 +74,11 @@ export const useViewModel = (search: ReadonlyURLSearchParams) => {
       : {
           ...movie,
           results:
-            movie?.results.filter((item) => item.title.includes(search)) || [],
+            movie?.results.filter((item) =>
+              item.title
+                .toLocaleLowerCase()
+                .includes(search.toLocaleLowerCase())
+            ) || [],
         };
 
     return favoriteSearch;
