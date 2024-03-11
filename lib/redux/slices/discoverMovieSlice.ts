@@ -1,5 +1,5 @@
 import { createAction, createSlice } from "@reduxjs/toolkit";
-import { AppEpic, store } from "../store";
+import { AppEpic } from "../store";
 import { catchError, filter, map, mergeMap, of } from "rxjs";
 import { MovieRepository } from "@/repository/movie.repository";
 import { MovieService } from "@/services/movie.service";

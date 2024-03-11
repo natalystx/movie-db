@@ -1,5 +1,4 @@
 import AuthenticationService from "@/services/authentication.service";
-import { CreateSessionInput } from "@/services/data-contract";
 
 export class AuthRepository {
   private _service: AuthenticationService;

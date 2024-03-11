@@ -1,6 +1,6 @@
 import { AuthRepository } from "@/repository/auth.repository";
 import AuthenticationService from "@/services/authentication.service";
-import { CreateSessionInput, UserDetailDto } from "@/services/data-contract";
+import { UserDetailDto } from "@/services/data-contract";
 import { createAction, createSlice } from "@reduxjs/toolkit";
 import { AppEpic } from "../store";
 import { catchError, filter, map, mergeMap, of, switchMap } from "rxjs";
@@ -46,7 +46,7 @@ export const authRequestTokenAsyncEpic: AppEpic = (action$) =>
 export const authCreateSessionAsyncEpic: AppEpic = (action$) =>
   action$.pipe(
     filter(createSessionAsync.match),
-    mergeMap((action) =>
+    mergeMap(() =>
       authRepository
         .createSession()
         .pipe(

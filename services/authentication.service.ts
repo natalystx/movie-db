@@ -1,10 +1,5 @@
 import Rxios from "@/core/rxios";
-import {
-  CreateSessionInput,
-  RequestTokenDto,
-  SessionDto,
-  ValidApiKeyDto,
-} from "./data-contract";
+import { RequestTokenDto, SessionDto, ValidApiKeyDto } from "./data-contract";
 import Session from "@/utils/Session";
 
 export default class AuthenticationService extends Rxios {
