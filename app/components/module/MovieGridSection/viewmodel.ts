@@ -146,7 +146,7 @@ export const useViewModel = (search: ReadonlyURLSearchParams) => {
     if (!searchQuery) {
       setCurrentPage({ discover: 1, favorite: 1 });
     }
-  }, [searchQuery]);
+  }, [searchQuery, activeCategory]);
 
   useEffect(() => {
     resetSearch();
