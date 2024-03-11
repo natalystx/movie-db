@@ -1,0 +1,20 @@
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-4);
+}
+
+.Header {
+  font-size: var(--text-3xl);
+  margin: 0;
+}
+
+.Input {
+  max-width: calc(var(--size-64) * 2);
+}
+
+@media screen and (min-width: 1280px) {
+  .Header {
+    font-size: var(--text-5xl);
+  }
+}

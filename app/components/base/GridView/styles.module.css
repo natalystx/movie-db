@@ -1,0 +1,13 @@
+.Grid {
+  width: auto;
+  display: grid;
+  grid-column: 1;
+  gap: var(--spacing-4);
+}
+
+@media screen and (min-width: 640px) {
+  .Grid {
+    grid-column: 3;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}

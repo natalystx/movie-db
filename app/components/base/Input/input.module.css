@@ -1,0 +1,27 @@
+.Input {
+  padding: var(--spacing-2) var(--spacing-4);
+  color: var(--text-color);
+  font-size: var(--text-sm);
+  font-weight: 400;
+  background-color: var(--color-dark-500);
+  border-radius: var(--rounded-xl);
+  height: var(--size-9);
+  width: auto;
+  border: 1px solid transparent;
+}
+
+.Input::placeholder {
+  color: var(--color-dark-200);
+}
+
+.Input:focus,
+.Input:focus-within {
+  outline: none;
+}
+
+@media screen and (min-width: 640px) {
+  .Input {
+    font-size: var(--text-base);
+    height: var(--size-11);
+  }
+}
